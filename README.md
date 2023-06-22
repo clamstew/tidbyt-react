@@ -26,5 +26,5 @@ Then a developer can make a react component that sends a base64 image, which is 
 
 ## Todo:
 
-- [ ] optimize the canvas size that gets rendered to base64 string to the size of a typical pixlet app
+- [x] optimize the canvas size that gets rendered to base64 string to the size of a typical pixlet app
 - [ ] add mechanism so user can pass values from the app schema on the tidbyt app to either set their "sub-react-app" they are loading (a param to the api). Or they could pass more values like text to display.
