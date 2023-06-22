@@ -9,7 +9,7 @@ const GridImage = () => {
     const context = canvas.getContext("2d");
 
     // Draw the grid image
-    const gridSize = 10;
+    const gridSize = 2;
     const canvasWidth = canvas.width;
     const canvasHeight = canvas.height;
     let i = 0;
@@ -26,8 +26,8 @@ const GridImage = () => {
 
   return React.createElement("canvas", {
     ref: canvasRef,
-    width: 300,
-    height: 300,
+    width: 64,
+    height: 32,
   });
 };
 
