@@ -2,7 +2,8 @@ load("render.star", "render")
 load("http.star", "http")
 load("encoding/base64.star", "base64")
 
-IMAGE_URL = "http://localhost:3000/grid-image-live"
+# IMAGE_URL = "http://localhost:3000/grid-image-live"
+IMAGE_URL = "http://localhost:3000/html"
 
 def main():
     rep = http.get(IMAGE_URL)

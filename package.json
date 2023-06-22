@@ -4,11 +4,13 @@
   "dependencies": {
     "canvas": "^2.11.2",
     "express": "^4.18.2",
+    "node-html-to-image": "^3.3.0",
     "nodemon": "^2.0.22",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "scripts": {
-    "start": "nodemon src/server.js"
+    "start": "nodemon src/server.js",
+    "start:test": "nodemon test.js"
   }
 }

@@ -2,6 +2,8 @@ const express = require("express");
 const { renderGridImageToString } = require("./renderGridImage");
 const { createCanvas } = require("canvas");
 
+const nodeHtmlToImage = require("node-html-to-image");
+
 const app = express();
 
 // FIXME: this basically renders <canvas> currently.
@@ -34,6 +36,29 @@ app.get("/grid-image-live", (req, res) => {
 
   const base64String = canvas.toDataURL(); // Convert canvas to base64 image string
   res.send(base64String.split(",")[1]);
+});
+
+// if this works then react
+// can render straight to the html
+// string
+app.get("/html", (req, res) => {
+  nodeHtmlToImage({
+    // output: "./image.png",
+    puppeteerArgs: {
+      defaultViewport: {
+        width: 64,
+        height: 32,
+      },
+    },
+    encoding: "base64",
+    html: "<html><body>Hello world!</body></html>",
+  }).then((result) => {
+    console.log(result);
+    // console.log("The image was created successfully!");
+    // imageToBase64();
+    res.send(result);
+  });
+  // res.send("hey");
 });
 
 app.listen(3000, () => {
