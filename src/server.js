@@ -13,11 +13,11 @@ app.get("/grid-image", (req, res) => {
 
 // working route
 app.get("/grid-image-live", (req, res) => {
-  const canvas = createCanvas(300, 300);
+  const canvas = createCanvas(64, 32);
   const context = canvas.getContext("2d");
 
   // Draw the grid image
-  const gridSize = 10;
+  const gridSize = 2;
   const canvasWidth = canvas.width;
   const canvasHeight = canvas.height;
   let i = 0;
