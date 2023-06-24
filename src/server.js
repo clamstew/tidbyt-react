@@ -51,7 +51,19 @@ app.get("/html", (req, res) => {
       },
     },
     encoding: "base64",
-    html: "<html><body>Hello world!</body></html>",
+    html: `
+    <html>
+      <body style="
+        padding-top: 6px;
+        padding-left: 3px;  
+        background: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      ">
+        👐
+      </body>
+    </html>`,
   }).then((result) => {
     console.log(result);
     // console.log("The image was created successfully!");
