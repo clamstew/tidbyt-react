@@ -66,11 +66,9 @@ app.get("/html", (req, res) => {
     </html>`,
   }).then((result) => {
     console.log(result);
-    // console.log("The image was created successfully!");
     // imageToBase64();
     res.send(result);
   });
-  // res.send("hey");
 });
 
 app.listen(3000, () => {
