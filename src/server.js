@@ -66,7 +66,6 @@ app.get("/html", (req, res) => {
     </html>`,
   }).then((result) => {
     console.log(result);
-    // imageToBase64();
     res.send(result);
   });
 });
