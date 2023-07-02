@@ -276,9 +276,11 @@ def main():
 
     print("next_birthday", next_birthday)
 
-    days_until_birthday = (next_birthday - today).to_timedelta().to_days()
+    days_until_birthday = time.time(year = next_birthday.year - today.year).format("2006-01-02T15:04:05Z07:00")# .in_location("Europe/London").to_timedelta().to_days() #.to_timedelta().to_days()
+     # .days() #.to_timedelta().to_days()
+    print("days_until_birthday", days_until_birthday)
 
-    print("The next birthday for", celebrity["name"], "is on", next_birthday.to_date(), "(", days_until_birthday, "days from now).")
+    print("The next birthday for", celebrity["name"], "is on", next_birthday.format("2006-01-02T15:04:05Z07:00"), "(", days_until_birthday, "days from now).")
 
 
     return render.Root(
